@@ -127,20 +127,6 @@ button:active {
     padding: 1rem 2rem;
 }
 
-.go-up {
-    float: right;position: -webkit-sticky;
-    position: sticky;
-    top: 90%; 
-    padding: 5px;
-    margin: 5px;
-    border-radius: 50%;
-    background-color: #FFFF0033;
-}
-
-.go-up:hover {
-    background-color: #FFFF00;
-}
-
 .headings {
     font-size: 3rem;
     text-shadow: -10px 10px rgba(128,128,128, 0.2);
@@ -271,7 +257,7 @@ button:active {
 
     aside {
         transition: all 100ms ease-in-out;
-        padding: 1rem;
+        padding: 0rem;
         height: auto;
         width: 100vw;
         overflow: hidden;
@@ -287,7 +273,7 @@ button:active {
     .info {
         flex-direction: row;
         justify-content: space-between;
-        width: max-content;
+        width: 100vw;
         margin: 0%;
     }
 
