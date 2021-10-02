@@ -332,11 +332,8 @@ button:active {
     }
 
     .theme-toggle {
-        margin: 0;
-    }
-
-    .theme-toggle p {
-        opacity: 0;
+        padding-bottom: 0.5rem;
+        float: right;
     }
 
     .dropdown {

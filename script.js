@@ -1,18 +1,15 @@
 let btn = document.querySelector(".theme-toggle");
 let theme = document.getElementById("theme-source");
-let btn_text = document.querySelector(".theme-toggle p");
 let btn_icon = document.getElementById("theme-toggle")
 
 btn.addEventListener("click", function () {
 if (theme.getAttribute("href") == "style.css") {
         theme.href = "dark.css";
         btn_icon.src = "./images/day.svg";
-        btn_text.textContent = "Light"
     }
     else {
         theme.href = "style.css";
         btn_icon.src = "./images/night.svg";
-        btn_text.textContent = "Dark"
     }
 })
 

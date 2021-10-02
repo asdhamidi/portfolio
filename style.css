@@ -283,6 +283,7 @@ button:active {
 
     .theme-toggle {
         display: inline;
+        margin-right: 0%;
     }
 
     .theme-toggle img{
@@ -323,11 +324,8 @@ button:active {
     }
 
     .theme-toggle {
-        margin: 0;
-    }
-
-    .theme-toggle p {
-        opacity: 0;
+        padding-bottom: 0.5rem;
+        float: right;
     }
 
     .dropdown {
