@@ -257,7 +257,7 @@ button:active {
 .links-reveal {
     position: absolute;
     backdrop-filter: blur(10px);
-    width: 250px;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,7 +272,7 @@ button:active {
     aside {
         transition: all 100ms ease-in-out;
         padding: 1rem;
-        height: 5rem;
+        height: auto;
         width: 100vw;
         overflow: hidden;
         position: fixed;
@@ -286,7 +286,7 @@ button:active {
 
     .info {
         flex-direction: row;
-        justify-content: left;
+        justify-content: space-between;
         width: max-content;
         margin: 0%;
     }
@@ -309,9 +309,6 @@ button:active {
     }
     aside hr{
         display: none;
-    }
-    nav {
-        margin-bottom: -15px;
     }
     nav ul {
         flex-direction: row;
