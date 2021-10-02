@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
 
+* {
+    scroll-behavior: smooth;
+    transition: all 500ms ease-in-out;
+}
 body {
-    transition: all 300ms ease-in-out;
     display: flex;
     flex-direction: row;
     margin: 0%;
     background-color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 aside {
-    transition: all 300ms ease-in-out;
     flex-shrink: 0;
     width: 16rem;
-    height: 100vh;
-    background: #f5effc;
+    height: 94vh;
+    background: #020b45;
+    color: white;
     box-shadow: 0 32px 64px rgb(17 17 17 / 4%);
     z-index: 1;
-    position: fixed;
-    padding: 1rem 1rem;
+    padding: 1.1rem 0rem;
 }
 .info {
     display: flex;
@@ -26,8 +27,9 @@ aside {
     align-items: center;
 }
 main {
-    width: 75vw;
-    margin-left: 18rem;
+    width: 80vw;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .name {
@@ -69,18 +71,21 @@ nav li {
 }
 
 nav li:hover{
-    transition: all 300ms ease-in;
-    background: #9992;
-    border-radius: 15px;
+    background: #fff;
+    color: black;
+    border-radius: 15px 0px 0px 15px;
 }
 
 .theme-toggle {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: 10px;
+    gap: 0.5rem;
 }
 
-#theme-toggle:hover {
+.theme-toggle:hover {
     transform: scale(1.1);
 }
 
@@ -201,7 +206,7 @@ button:active {
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: auto;
+    width: 300px;
     border: 1px groove #9996;
     border-radius: 5px;
     margin: 10px;
@@ -230,4 +235,134 @@ button:active {
     transition: all 300ms ease-in-out;
     border: none;
     background-color: #9999;
+}
+
+.dropdown {
+    position: relative;
+    margin: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.dropdown .bar {
+    height:  3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.links-reveal {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 855px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        transition: all 100ms ease-in-out;
+        padding: 1rem;
+        height: 5rem;
+        width: 100vw;
+        overflow: hidden;
+        position: fixed;
+        top: 0%;
+        z-index: 0;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .info {
+        flex-direction: row;
+        justify-content: left;
+        width: max-content;
+        margin: 0%;
+    }
+
+    .name {
+        margin-right: 1rem;
+    }
+
+    .theme-toggle {
+        display: inline;
+    }
+
+    .theme-toggle img{
+        position: relative;
+        top: 0.5rem;
+    }
+
+    nav {
+        display: inline-block;
+    }
+    aside hr{
+        display: none;
+    }
+    nav {
+        margin-bottom: -15px;
+    }
+    nav ul {
+        flex-direction: row;
+        margin: 0%;
+    }
+
+    nav li:hover{
+        background: #fff;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .projects li {
+        margin: 10px 2px;
+    }
+
+    .tech li {
+        margin: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .links-reveal img{
+        filter: invert(100%) sepia(21%) saturate(7493%) hue-rotate(190deg) brightness(118%) contrast(106%);
+    }
+
+    .theme-toggle p {
+        opacity: 0;
+    }
+
+    .theme-toggle {
+        margin: 0%;
+    }
+
+    .dropdown {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .sections {
+        padding: 1rem 0.5rem;
+    }
+
+    .sections p {
+        font-size: 1rem;
+    }
+
+    p, h1, h2 {
+        font-size: 1rem;
+    }
+
 }

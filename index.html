@@ -8,13 +8,18 @@
     <script src="./script.js" defer></script>
     <title>Portfolio</title>
 </head>
-<body id="Top">
+<body >
     <aside>
         <div class="info">
             <div class="name">
                 Asadullah Hamidi
             </div>
-            <div>
+            <a href="#" class="dropdown">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="links" id="link-menu">
                 <ul style="padding: 0px;margin: 0px;">
                     <li>
                         <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
@@ -64,10 +69,11 @@
         </nav>
         <div class="theme-toggle">
             <img src="./images/night.svg" id="theme-toggle">
+            <p style="margin: 0%; display: inline;">Dark</p>
         </div>
     </aside>
     <main>
-        <div class="landing">
+        <div class="landing" id="Top"> 
             <h1 style="font-family: 'Poppins'; font-size: 5rem; margin: 0%;"> < > </h1>
             <h1 style="font-weight: 400;">
                 Hey there, I'm Asad!
