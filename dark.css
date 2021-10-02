@@ -21,17 +21,17 @@ body {
 aside {
     flex-shrink: 0;
     width: 16rem;
-    height: 94vh;
+    height: 100vh;
     background: #1c1427;
     box-shadow: 0 32px 64px rgb(17 17 17 / 4%);
     z-index: 1;
-    padding: 1.1rem 0rem;
     color: white;
 }
 .info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 main {
     width: 80vw;
@@ -81,18 +81,27 @@ nav li:hover{
     background: #303030;
 }
 
+.theme-container {
+    display: inline-flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+}
 .theme-toggle {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    padding: 0.5rem;
     gap: 0.5rem;
-    align-self: flex-end;
+    background-color: #ff04;
+    border-radius: 20px;
 }
 
 .theme-toggle:hover {
-    transform: scale(1.1);
+    transition: all 300ms ease-in;
+    box-shadow: 1px 1px 10px #ff07;
 }
 
 button{
@@ -128,7 +137,6 @@ button:active {
     align-items: center;
     flex-direction: column;
     overflow-y: hidden;
-    background: linear-gradient(180deg, #333, #303030);
 }
 
 .sections {
@@ -207,6 +215,7 @@ button:active {
     padding: 10px;
     text-align: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .projects li:hover{
@@ -215,6 +224,8 @@ button:active {
 }
 
 .tech {
+    display: flex;
+    flex-wrap: wrap;
     padding: 0%;
     margin: 0.25rem;
 }
@@ -222,7 +233,7 @@ button:active {
 .tech li {
     border-radius: 50px;
     background-color: #9993;
-    border: none;
+    margin: 0.25rem;
     color: white;
 }
 
@@ -248,109 +259,107 @@ button:active {
     border-radius: 10px;
 }
 
-.links-reveal {
+
+.links-list {
+    display: none;
+}
+
+.dropdown-links {
+    display: none;
     position: absolute;
     backdrop-filter: blur(10px);
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #0004;
+    border: 1px groove #6665;
     border-radius: 10px;
+    top: 4rem;
+    right: 0.85rem;
+    transition: all 500ms ease-in;
+}
+
+.dropdown-links ul {
+    flex-direction: column;
+}
+
+@media screen and (min-width: 856px) {
+    .dropdown {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 855px) {
     body {
         flex-direction: column;
+        font-size: 1em;
     }
 
-    aside {
-        transition: all 100ms ease-in-out;
-        padding: 0rem 0.25rem;
-        height: auto;
-        width: 100vw;   
-        overflow: hidden;
-        position: fixed;
-        top: 0%;
-        z-index: 0;
+    .sections p {
+        font-size: 1em;
+        font-weight: 300;
     }
 
+    .name {
+        font-size: 1.25rem;
+    }
+    .landing h1 {
+        font-size: 1.5rem;
+    }
+
+    .landing {
+        height: 75vh;
+    }
     main {
         width: 100vw;
     }
+    .sections {
+        padding: 0.75rem;
+    }
+    aside {
+        width: 100vw;
+        height: auto;
+        position: sticky;
+        top: 0%;
+    }
 
     .info {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100vw;
         margin: 0%;
     }
 
     .name {
-        margin-right: 1rem;
+        margin: auto 0.5rem;
     }
 
-    .theme-toggle {
-        display: inline;
-    }
-
-    .theme-toggle img{
-        position: relative;
-        top: 0.5rem;
-    }
-
-    nav {
-        display: inline-block;
-    }
-    
-    aside hr{
+    nav ul{
         display: none;
     }
 
-    nav ul {
-        flex-direction: row;
-        margin: 0%;
-        margin-bottom: -5px;
-    }
-
-    .tech li {
-        margin: 0.1rem;
-    }
-    .projects li {
-        margin: 10px 2px;
-    }
-}
-
-@media screen and (max-width: 530px) {
-    .links-reveal img{
-        filter: invert(100%) sepia(21%) saturate(7493%) hue-rotate(190deg) brightness(118%) contrast(106%);
-    }
-
-    .theme-toggle {
-        padding-bottom: 0.5rem;
-    }
-
-    .dropdown {
-        display: flex;
+    .links-list {
+        display: inline;
     }
 
     .links {
         display: none;
     }
 
-    .sections {
-        padding: 1rem 0.5rem;
-    }
-    
-    .sections p {
-        font-size: 1rem;
+    .dropdown {
+        display: flex;
     }
 
-    .tech li {
-        margin: 0.1rem;
-    }
-    p, h1, h2 {
-        font-size: 1rem;
+    .theme-container {
+        transform: scale(0.9);
     }
 
+    aside hr {
+        display: none;
+    }
 
+    .projects li, .tech {
+        width: 50vw;
+    }
 }

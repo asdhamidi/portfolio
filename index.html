@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" id="theme-source">
-    <script src="./script.js" defer></script>
-    <title>Portfolio</title>
-</head>
-<body >
-    <aside>
-        <div class="info">
-            <div class="name">
-                Asadullah Hamidi
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-source">
+        <script src="./script.js" defer></script>
+        <title>Portfolio</title>
+    </head>
+    <body >
+        <aside>
+            <div class="info">
+                <a href="#" class="dropdown">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="name">
+                    Asadullah Hamidi
+                </div>
+                <img src="./images/link.svg" class="links-list">
+                <div class="dropdown-links">
+                    <ul style="padding: 0px;margin: 0px;">
+                        <li>
+                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/fun.svg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links" id="link-menu">
+                    <ul style="padding: 0px;margin: 0px;">
+                        <li>
+                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/fun.svg"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <a href="#" class="dropdown">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="links" id="link-menu">
-                <ul style="padding: 0px;margin: 0px;">
-                    <li>
-                        <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
-                    </li>
-                    <li>
-                        <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/fun.svg"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <hr>    
         <nav>
             <ul>
@@ -67,18 +90,19 @@
                 </a> -->
             </ul>
         </nav>
-        <div class="theme-toggle">
-            <img src="./images/night.svg" id="theme-toggle">
-        </div>
     </aside>
     <main>
+        <div class="theme-container">
+            <div class="theme-toggle">
+                <img src="./images/night.svg" id="theme-toggle">
+            </div>
+        </div>
         <div class="landing"> 
             <h1 style="font-family: 'Poppins'; font-size: 5rem; margin: 0%;"> < > </h1>
             <h1 style="font-weight: 400;">
                 Hey there, I'm Asad!
             </h1>
         </div>
-        <br id="About"></br>
         <div class="sections" id="About">
             <h1 class="headings">About</h1>
             <p><b>Hello! </b></p>
@@ -93,8 +117,7 @@
                 <button type="submit">Résumé</button>
             </form>
         </div>
-        <br id="Skills"></br>
-        <div class="sections">
+        <div class="sections" id="Skills">
             <h1 class="headings">Skills</h1>
             <ul class="content-box">
                 <div class="skill-button">
@@ -127,8 +150,7 @@
                 </div>
             </ul>
         </div>
-        <br id="Projects"></br>
-        <div class="sections">
+        <div class="sections" id="Projects">
             <h1 class="headings">Projects</h1>
             <ul class="projects">
                 <li>
