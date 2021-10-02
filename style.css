@@ -259,7 +259,7 @@ button:active {
         transition: all 100ms ease-in-out;
         padding: 0rem;
         height: auto;
-        width: 100vw;
+        width: 100vw;   
         overflow: hidden;
         position: fixed;
         top: 0%;
@@ -293,12 +293,15 @@ button:active {
     nav {
         display: inline-block;
     }
+    
     aside hr{
         display: none;
     }
+
     nav ul {
         flex-direction: row;
         margin: 0%;
+        margin-bottom: -5px;
     }
 
     nav li:hover{
@@ -306,12 +309,11 @@ button:active {
         border-radius: 15px 15px 0px 0px;
     }
 
-    .projects li {
-        margin: 10px 2px;
-    }
-
     .tech li {
         margin: 0.1rem;
+    }
+    .projects li {
+        margin: 10px 2px;
     }
 }
 
@@ -320,12 +322,12 @@ button:active {
         filter: invert(100%) sepia(21%) saturate(7493%) hue-rotate(190deg) brightness(118%) contrast(106%);
     }
 
-    .theme-toggle p {
-        opacity: 0;
+    .theme-toggle {
+        margin: 0;
     }
 
-    .theme-toggle {
-        margin: 0%;
+    .theme-toggle p {
+        opacity: 0;
     }
 
     .dropdown {
@@ -339,13 +341,17 @@ button:active {
     .sections {
         padding: 1rem 0.5rem;
     }
-
+    
     .sections p {
         font-size: 1rem;
     }
 
+    .tech li {
+        margin: 0.1rem;
+    }
     p, h1, h2 {
         font-size: 1rem;
     }
+
 
 }
