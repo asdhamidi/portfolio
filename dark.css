@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+h1, h2, h3, h4, h5, h6, p, span, a  {
+    color: white;
+}
 
 body {
     transition: all 300ms ease-in-out;
     display: flex;
     flex-direction: row;
     margin: 0%;
-    background-color: #fff;
+    background-color: #444444;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -14,11 +17,12 @@ aside {
     flex-shrink: 0;
     width: 16rem;
     height: 100vh;
-    background: #f5effc;
+    background: #333;
     box-shadow: 0 32px 64px rgb(17 17 17 / 4%);
     z-index: 1;
     position: fixed;
     padding: 1rem 1rem;
+    color: white;
 }
 .info {
     display: flex;
@@ -54,7 +58,7 @@ li img, .skill-box img {
 
 li img:hover {
     transform: scale(1.1);
-    filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
+    filter: invert(89%) sepia(67%) saturate(1730%) hue-rotate(359deg) brightness(109%) contrast(102%);   
 }
 
 nav ul {
@@ -69,8 +73,8 @@ nav li {
 }
 
 nav li:hover{
-    transition: all 300ms ease-in;
-    background: #9992;
+    transition: all 300ms ease-in-out;
+    background: #3335;
     border-radius: 15px;
 }
 
@@ -87,16 +91,18 @@ nav li:hover{
 button{
     font-size: 1.25rem;
     background: transparent;
-    border: 2px solid #04AA6D;
+    border: 2px solid #FFFF0090;
     border-radius: 5px;
     width: auto;
     text-align: center;
     transition: all 500ms ease-in-out;
+    color: white;
 }
 
 button:hover{
     box-shadow: -5px 5px rgba(128,128,128, 0.3);
-    background: #04AA6D;
+    background: #FFFF00;
+    color: black;
     position: relative;
     left: 3px;
     bottom: 3px;
@@ -115,7 +121,7 @@ button:active {
     align-items: center;
     flex-direction: column;
     overflow-y: hidden;
-    background: linear-gradient(180deg, #f5effc20, #fff);
+    background: linear-gradient(180deg, #333, #444);
 }
 
 .sections {
@@ -135,7 +141,6 @@ button:active {
 .go-up:hover {
     background-color: #FFFF00;
 }
-
 .headings {
     font-size: 3rem;
     text-shadow: -10px 10px rgba(128,128,128, 0.2);
@@ -150,7 +155,7 @@ button:active {
 }
 
 .sections:hover .headings{
-    text-shadow: -12px 12px #04AA6D30;
+    text-shadow: -12px 12px rgba(255, 255, 0, 0.1);;
 }
 
 .sections p {
@@ -177,7 +182,7 @@ button:active {
     justify-content: flex-start;
     padding: 0.25rem;
     margin: 0.5rem;
-    box-shadow: 0px 0px 10px #CCC;
+    box-shadow: 0px 0px 10px #111;
     border-radius: 0.25rem;
 }
 
@@ -202,7 +207,7 @@ button:active {
     flex-direction: column;
     flex: 1;
     width: auto;
-    border: 1px groove #9996;
+    border: 1px groove #1115;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
@@ -212,7 +217,7 @@ button:active {
 
 .projects li:hover{
     transition: all 500ms ease-in-out;
-    border: 1px groove #04AA6D;
+    border: 1px groove #FFCC0090;
 }
 
 .tech {
@@ -222,12 +227,13 @@ button:active {
 
 .tech li {
     border-radius: 50px;
-    background-color: #6663;
+    background-color: #9993;
     border: none;
+    color: white;
 }
 
 .tech li:hover {
     transition: all 300ms ease-in-out;
     border: none;
-    background-color: #9999;
+    background-color: #9995;
 }
