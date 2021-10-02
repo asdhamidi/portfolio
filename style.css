@@ -73,7 +73,6 @@ nav li {
 nav li:hover{
     background: #fff;
     color: black;
-    border-radius: 15px 0px 0px 15px;
 }
 
 .theme-toggle {
@@ -257,7 +256,7 @@ button:active {
 
     aside {
         transition: all 100ms ease-in-out;
-        padding: 0rem;
+        padding: 0rem 0.25rem;
         height: auto;
         width: 100vw;   
         overflow: hidden;
@@ -305,11 +304,6 @@ button:active {
         margin-bottom: -5px;
     }
 
-    nav li:hover{
-        background: #fff;
-        border-radius: 15px 15px 0px 0px;
-    }
-
     .tech li {
         margin: 0.1rem;
     }
@@ -325,7 +319,6 @@ button:active {
 
     .theme-toggle {
         padding-bottom: 0.5rem;
-        float: right;
     }
 
     .dropdown {
