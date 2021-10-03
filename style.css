@@ -239,7 +239,7 @@ button:active {
 
 .dropdown {
     position: relative;
-    margin: 15px;
+    margin: 5px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -261,17 +261,35 @@ button:active {
 .dropdown-links {
     display: none;
     position: absolute;
+    width: 90vw;
+    height: 50vh;
     backdrop-filter: blur(10px);
     background-color: #FFF5;
     border: 1px groove #6665;
     border-radius: 10px;
-    top: 4rem;
-    right: 0.85rem;
+    top: 25vh;
+    left: 5vw;
     transition: all 500ms ease-in;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #020b45;
+    box-shadow: 0px 0px 0.5rem #0005;
 }
 
 .dropdown-links ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.dropdown-links img {
+    transform: scale(1.5);
+}
+
+.dropdown-links li {
+    margin: 0.5rem;
 }
 
 @media screen and (min-width: 856px) {
@@ -291,6 +309,7 @@ button:active {
     }
     .name {
         font-size: 1.25rem;
+        margin: 0rem 0.25rem;
     }
     .landing h1 {
         font-size: 1.5rem;
@@ -317,10 +336,6 @@ button:active {
         justify-content: space-between;
         margin: 0%;
         padding: 1rem 0.5rem;
-    }
-
-    .name {
-        margin: auto 0.5rem;
     }
 
     .theme-container {

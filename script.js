@@ -35,7 +35,6 @@ let links = document.querySelector(".dropdown-links");
 let links_open = false;
 
 link_btn.addEventListener("click", function() {
-    console.log("Check");
     if (!links_open)
     {
         links_open = true;
@@ -46,3 +45,13 @@ link_btn.addEventListener("click", function() {
         links.style.display = "none";
     }
 })
+
+let close_btn = document.getElementById("close");
+close_btn.addEventListener("click", function closemenu() {
+    links.style.display = "none";
+    links_open = false;
+});
+document.querySelector("main").addEventListener("click", function closemenu() {
+    links.style.display = "none";
+    links_open = false;
+});
