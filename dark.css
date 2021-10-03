@@ -234,7 +234,8 @@ button:active {
     border-radius: 50px;
     background-color: #9993;
     margin: 0.25rem;
-    color: white;
+    border: none;
+    border: none;
 }
 
 .tech li:hover {
@@ -304,6 +305,12 @@ button:active {
     .name {
         font-size: 1.25rem;
     }
+
+    .theme-container {
+        position:inherit;
+        margin: 0rem 0.25rem;
+    }
+
     .landing h1 {
         font-size: 1.5rem;
     }
@@ -329,6 +336,8 @@ button:active {
         flex-direction: row;
         justify-content: space-between;
         margin: 0%;
+        padding: 1rem 0.5rem;
+
     }
 
     .name {
