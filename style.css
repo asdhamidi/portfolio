@@ -288,7 +288,8 @@ button:active {
 }
 
 .dropdown-links img {
-    transform: scale(1.5);
+    transform: scale(2);
+    margin: 0.5rem;
 }
 
 .dropdown-links li {
@@ -348,6 +349,7 @@ footer img:hover {
 
     .headings {
         font-size: 2rem;
+        text-shadow: -5px 5px rgba(128,128,128, 0.2);
     }
 
     .sub-headings {
