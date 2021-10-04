@@ -157,7 +157,7 @@ button:active {
 }
 
 .sections:hover .headings{
-    text-shadow: -12px 12px rgba(255, 255, 0, 0.1);;
+    text-shadow: -12px 12px rgba(255, 255, 0, 0.1);
 }
 
 .sections p {
@@ -372,7 +372,9 @@ footer img:hover {
         font-size: 2rem;
         text-shadow: -5px 5px rgba(128,128,128, 0.2);
     }
-
+    .sections:hover .headings{
+        text-shadow: -8px 8px rgba(255, 255, 0, 0.1);
+    }
     .sub-headings {
         font-size: 1.5rem;
     }
