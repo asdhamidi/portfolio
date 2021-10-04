@@ -292,6 +292,9 @@ button:active {
     margin: 0.5rem;
 }
 
+.dropdown-links img:hover {
+    transform: scale(1.9);
+}
 .dropdown-links li {
     margin: 0.5rem;
 }
@@ -336,7 +339,7 @@ footer img:hover {
         font-size: 1.5rem;
     }
     .landing {
-        height: 75vh;
+        height: 80vh;
     }
     main {
         width: 100vw;
@@ -409,4 +412,7 @@ footer img:hover {
         width: 50vw;
     }
 
+    .links-list:hover {
+        filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
+    }
 }
