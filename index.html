@@ -6,17 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css" id="theme-source">
         <script src="./script.js" defer></script>
-        <title>Portfolio</title>
+        <meta
+            name="description"           
+            content="A Portfolio website of a Computer Science student,
+                    web developer, and coding ethusiast, listing out the personal details,
+                    skills, and development projects and other related details.">
+        <title>Asadullah Hamidi - Portfolio</title>
     </head>
     <body >
         <aside>
             <div class="info">
                 <div style="display: flex; align-items: center;">
-                    <a href="#" class="dropdown">
+                    <div href="#" class="dropdown">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
-                    </a>
+                    </div>
                     <div class="name">
                         Asadullah Hamidi
                     </div>
@@ -27,56 +32,55 @@
                             <img src="./images/night.svg" id="theme-toggle">
                         </div>
                     </div>
-                    <img src="./images/link.svg" class="links-list">
+                    <img src="./images/link.svg" class="links-list" alt="theme toggle button">
                 </div>
                 <div class="dropdown-links" id="dropdown-links-menu">
-                    <h2>Connect</h2>
+                    <h1>Connect</h1>
                     <ul style="padding: 0px;margin: 0px;">
                         <li>
-                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
+                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank" rel="noopener"><img src="images/mail.svg" alt="email button"></a>  
                         </li>
                         <li>
-                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
+                            <a href="https://github.com/asdhamidi" target="_blank" rel="noopener"><img src="images/github.svg" alt="github profile link"></a>  
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
+                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank" rel="noopener"><img src="images/linkedin.svg" alt="linkedin profile link"></a>  
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
+                            <a href="https://www.instagram.com/asad.codes" target="_blank" rel="noopener"><img src="images/instagram.svg" alt="instagram profile link"></a>
                         </li>
                         <li>
-                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
+                            <a href="https://www.asdhamidi.medium.com" target="_blank" rel="noopener"><img src="images/medium.svg" alt="medium profile link"></a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/fun.svg"></a>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener"><img src="images/fun.svg" alt="mysterious video link"></a>
                         </li>
                     </ul>
-                    <h4 id="close" style="font-size: large; padding: 1rem;"><b>✖</b></h4>
+                    <span id="close" style="font-size: large;"><b>✖</b></span>
                 </div>
                 <div class="links" id="link-menu">
                     <ul style="padding: 0px;margin: 0px;">
                         <li>
-                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank"><img src="images/mail.svg"></a>  
+                            <a href="mailto:asad.hamidi119@gmail.com" target="_blank" rel="noopener"><img src="images/mail.svg" alt="email button"></a>  
                         </li>
                         <li>
-                            <a href="https://github.com/asdhamidi" target="_blank"><img src="images/github.svg"></a>  
+                            <a href="https://github.com/asdhamidi" target="_blank" rel="noopener"><img src="images/github.svg" alt="github profile link"></a>  
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank"><img src="images/linkedin.svg"></a>  
+                            <a href="https://www.linkedin.com/in/asadullahhamidi/" target="_blank" rel="noopener"><img src="images/linkedin.svg" alt="linkedin profile link"></a>  
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/asad.codes" target="_blank"><img src="images/instagram.svg"></a>
+                            <a href="https://www.instagram.com/asad.codes" target="_blank" rel="noopener"><img src="images/instagram.svg" alt="instagram profile link"></a>
                         </li>
                         <li>
-                            <a href="https://www.asdhamidi.medium.com" target="_blank"><img src="images/medium.svg"></a>
+                            <a href="https://www.asdhamidi.medium.com" target="_blank" rel="noopener"><img src="images/medium.svg" alt="medium profile link"></a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/fun.svg"></a>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener"><img src="images/fun.svg" alt="mysterious video link"></a>
                         </li>
                     </ul>
                 </div>
             </div>
-        <hr>    
         <nav>
             <ul>
                 <a href="#About">
@@ -116,9 +120,9 @@
                 & exploring technologies. 
                 As of now, I'm exploring Web Development and really enjoying it.</p>
             <h1 class="sub-headings">Education</h1>
-            <p>B. Sc (Hons.) Computer Science</p>
-            <h4>Graphic Era (Deemed to be University)</h4>
-            <h5>2020-2023</h5>
+            <h2 style="font-size: 1rem;">B. Sc (Hons.) Computer Science</h2>
+            <h3 style="font-size: 0.65rem; font-weight: 400;">Graphic Era (Deemed to be University)</h3>
+            <h4 style="font-size: 0.75rem;">2020-2023</h4>
             <form method="get" action="./assets/resume.pdf">
                 <button type="submit">Résumé</button>
             </form>
@@ -127,31 +131,31 @@
             <h1 class="headings">Skills</h1>
             <ul class="content-box">
                 <div class="skill-button">
-                    <img src="./images/c.svg">
+                    <img src="./images/c.svg" alt="C language icon">
                     <p>C</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/cpp.svg">
+                    <img src="./images/cpp.svg" alt="C++ language icon">
                     <p>C++</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/python.svg">
+                    <img src="./images/python.svg" alt="Python language icon">
                     <p>Python</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/html.svg">
+                    <img src="./images/html.svg" alt="HTML language icon">
                     <p>HTML</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/css.svg">
+                    <img src="./images/css.svg" alt="CSS icon">
                     <p>CSS</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/js.svg">
+                    <img src="./images/js.svg" alt="Javascript language icon">
                     <p>Javascript</p>
                 </div>
                 <div class="skill-button">
-                    <img src="./images/git.svg">
+                    <img src="./images/git.svg" alt="git icon">
                     <p>Git</p>
                 </div>
             </ul>
@@ -168,7 +172,7 @@
                         <li>CSS</li>
                         <li>Javascript</li>
                     </ul>
-                    <a href="https://github.com/asdhamidi/rock-paper-scissors" target="_blank"><img src="images/github.svg"></a>
+                    <a href="https://github.com/asdhamidi/rock-paper-scissors" target="_blank"><img src="images/github.svg" alt="link to the github page of the project"></a>
                 </li>
                 <li>
                     <h1 class="sub-headings project-heading">6.0002</h1>
@@ -181,7 +185,7 @@
                         <li>Statistics</li>
                         <li>NumPy</li>
                     </ul>
-                    <a href="https://github.com/asdhamidi/6.0002" target="_blank"><img src="images/github.svg"></a>
+                    <a href="https://github.com/asdhamidi/6.0002" target="_blank"><img src="images/github.svg" alt="link to the github page of the project"></a>
                 </li>
                 <li>
                     <h1 class="sub-headings project-heading">DSA</h1>
@@ -192,13 +196,18 @@
                         <li>Python</li>
                         <li>C++</li>
                     </ul>
-                    <a href="https://github.com/asdhamidi/DSA" target="_blank"><img src="images/github.svg"></a>
+                    <a href="https://github.com/asdhamidi/DSA" target="_blank"><img src="images/github.svg" alt="link to the github page of the project"></a>
                 </li>
             </ul>
         </div>
         <!-- <div class="sections" id="Contact">
             <h1 class="headings">Contact</h1>
         </div> -->
+        <footer>
+            <a href="https://github.com/asdhamidi/asdhamidi.github.io">
+                <img src="./images/paw.svg" alt="Website Source Code github page">
+            </a>
+        </footer>
     </main>
 </body>
 </html>

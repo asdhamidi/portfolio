@@ -194,7 +194,8 @@ button:active {
 }
 
 .skill-button:hover {
-    border: none;
+    box-shadow: 0px 0px 10px #6665;
+
 }
 
 .projects {
@@ -299,6 +300,26 @@ button:active {
     margin: 0.5rem;
 }
 
+footer {
+    background-color: #6665;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img:hover {
+    transition: all 700ms ease-in-out;
+    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 856px) {
+    .dropdown {
+        display: none;
+    }
+}
 @media screen and (min-width: 856px) {
     .dropdown {
         display: none;
@@ -339,15 +360,25 @@ button:active {
     }
     main {
         width: 100vw;
+        margin-top: 5rem;
+        overflow-y: visible;
     }
     .sections {
         padding: 0.75rem;
     }
+    
+    .headings {
+        font-size: 2rem;
+    }
+
+    .sub-headings {
+        font-size: 1.5rem;
+    }
     aside {
         width: 100vw;
         height: auto;
-        position: sticky;
-        top: 0%;
+        position: fixed;
+        background: rgba(28, 20, 39, 0.97);
     }
 
     .info {
@@ -355,12 +386,12 @@ button:active {
         flex-direction: row;
         justify-content: space-between;
         margin: 0%;
-        padding: 1rem 0.5rem;
-
+        padding: 0.5rem;
     }
 
     nav ul{
         display: none;
+        margin: 0%;
     }
 
     .links-list {
@@ -386,4 +417,6 @@ button:active {
     .projects li, .tech {
         width: 50vw;
     }
+
+    
 }
