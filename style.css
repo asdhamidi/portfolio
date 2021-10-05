@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0%;
-    background-color: #fff;
+    background-color: #00f4;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 aside {
@@ -55,7 +55,8 @@ li img, .skill-box img {
 }
 
 li img:hover {
-    transform: scale(1.1);
+    transition: transform .15s cubic-bezier(.17,.67,.29,2.71) 0s;
+    transform: translate3d(0px, 0px, 0px) scale(1.1);
     filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
 }
 
@@ -134,7 +135,13 @@ button:active {
 }
 
 .sections {
-    padding: 1rem 2rem;
+    padding: 0.25rem 2rem;
+    margin: 1rem 2rem;
+    background: linear-gradient(120deg, #fff, #fff9);
+    box-shadow: 0 0 5px #0008;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+
 }
 
 .headings {
@@ -347,6 +354,7 @@ footer img:hover {
         overflow-y: visible;
     }
     .sections {
+        margin: 1rem;
         padding: 0.75rem;
     }
 
