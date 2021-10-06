@@ -64,6 +64,8 @@ close_btn.addEventListener("click", function closemenu() {
 document.querySelector("main").addEventListener("click", function closemenu() {
     links.style.display = "none";
     links_open = false;
-    links_nav.style.display = "none";
-    links_1 = true;
+    if (window.innerWidth <= 855 && !links_1) {
+        links_nav.style.display = "none";
+        links_1 = true;
+    }
 });
