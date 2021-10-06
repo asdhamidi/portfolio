@@ -37,28 +37,6 @@ main {
     height: 100vh;
     overflow-y: scroll;
 }
-.circle1,
-.circle2 {
-  height: 10rem;
-  width: 10rem;
-  position: fixed;
-  border-radius: 50%;
-  z-index: -1;
-  animation: color 10s ease-in-out 0s infinite;
-  animation-fill-mode: forwards;
-}
-
-.circle1 {
-  top: 5%;
-  right: 15%;
-}
-.circle2 {
-  animation: color 7s ease-in-out 1.5s infinite;
-  height: 7rem;
-  width: 7rem;
-  bottom: 5%;
-  left: 10%;
-}
 
 @keyframes color {
     25% {
@@ -159,7 +137,7 @@ button{
 }
 
 button:hover{
-    box-shadow: -5px 5px rgba(128,128,128, 0.3);
+    box-shadow: -3px 3px rgba(128,128,128, 0.3);
     background: #FFFF00;
     color: black;
     position: relative;
@@ -191,14 +169,14 @@ button:active {
 
 .headings {
     font-size: 3rem;
-    text-shadow: -10px 10px rgba(128,128,128, 0.2);
+    text-shadow: -0.25rem 0.25rem rgba(128,128,128, 0.2);
     font-weight: 600;
     margin-bottom: 2rem;
     transition: all 300ms ease-in-out;
 }
 
 .sections:hover .headings{
-    text-shadow: -12px 12px rgba(255, 255, 0, 0.1);
+    text-shadow: -0.35rem 0.35rem rgba(255, 255, 0, 0.1);
 }
 
 .sections p {
@@ -411,10 +389,10 @@ h1 {
     
     .headings {
         font-size: 2rem;
-        text-shadow: -5px 5px rgba(128,128,128, 0.2);
+        text-shadow: -0.25rem 0.25rem rgba(128,128,128, 0.2);
     }
     .sections:hover .headings{
-        text-shadow: -8px 8px rgba(255, 255, 0, 0.1);
+        text-shadow: -0.3rem 0.3rem rgba(255, 255, 0, 0.1);
     }
     .sub-headings {
         font-size: 1.5rem;
