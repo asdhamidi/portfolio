@@ -2,29 +2,41 @@
 
 * {
     scroll-behavior: smooth;
-    transition: all 500ms ease-in-out;
+    transform-origin: center;
 }
+
+h1, h2, h3, h4, h5, h6, p, span, a  {
+    color: white;
+}
+
 body {
     display: flex;
     flex-direction: row;
     margin: 0%;
-    background: linear-gradient(to right top, #87CEE7, #87CEE0);
+    background: url(../images/bg-dark.svg);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1 {
-    margin: 0%;
-}
 aside {
     flex-shrink: 0;
     width: 16rem;
     height: 100vh;
-    background: #020b45;
-    color: white;
-    box-shadow: 0 32px 64px rgb(17 17 17 / 4%);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px black;
     z-index: 1;
+    color: white;
 }
-
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+main {
+    width: 80vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
 .circle1,
 .circle2 {
   height: 10rem;
@@ -59,19 +71,14 @@ aside {
         background: #fff9;
     }
 }
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+.circle1 {
+  top: 5%;
+  right: 15%;
 }
-main {
-    width: 80vw;
-    height: 100vh;
-    overflow-y: scroll;
-    
+.circle2 {
+  bottom: 5%;
+  left: 10%;
 }
-
 .name {
     font-size: 1.5rem;
     margin: 15px 5px;
@@ -90,19 +97,17 @@ li {
     text-decoration: none;
 }
 
-li img, .skill-box img {
+li svg, .skill-box svg {
     width: 2rem;
 }
 
-li img:hover {
+li svg:hover {
+    transform: scale(1.1);
     transition: transform .15s cubic-bezier(.17,.67,.29,2.71) 0s;
-    transform: translate3d(0px, 0px, 0px) scale(1.1);
-    filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
+    filter: invert(89%) sepia(67%) saturate(1730%) hue-rotate(359deg) brightness(109%) contrast(102%);   
 }
 
 nav ul {
-    transition: all 500ms ease-in;
-    display: flex;
     flex-direction: column;
     font-size: 1rem;
     padding: 0%;
@@ -115,16 +120,15 @@ nav li {
 }
 
 nav li:hover{
-    background: #fff;
-    color: black;
+    background: #333;
 }
 
 .theme-container {
     display: inline-flex;
+    justify-content: flex-start;
     position: absolute;
     bottom: 5%;
     right: 1%;
-    justify-content: flex-start;
 }
 .theme-toggle {
     display: flex;
@@ -133,32 +137,34 @@ nav li:hover{
     align-items: center;
     padding: 0.5rem;
     gap: 0.5rem;
-    background-color: #00f4;
+    background-color: #ff04;
     border-radius: 20px;
 }
 
 .theme-toggle:hover {
     transition: all 300ms ease-in;
-    box-shadow: 1px 1px 10px #00f7;
+    box-shadow: 1px 1px 10px #ff07;
 }
 
 button{
     font-size: 1.25rem;
     background: transparent;
-    border: 2px solid #6661;
-    box-shadow: 0 0 1px #666;
+    border: 2px solid #555;
+    box-shadow: 0 0 1px #888;
     border-radius: 5px;
     width: auto;
     text-align: center;
     transition: all 500ms ease-in-out;
+    color: white;
 }
 
 button:hover{
-    box-shadow: -3px 3px rgba(128,128,128, 0.3);
-    background: #04AA6D;
+    box-shadow: -5px 5px rgba(128,128,128, 0.3);
+    background: #FFFF00;
+    color: black;
     position: relative;
-    left: 1px;
-    bottom: 1px;
+    left: 3px;
+    bottom: 3px;
 }
 
 button:active {
@@ -174,14 +180,13 @@ button:active {
     align-items: center;
     flex-direction: column;
     overflow-y: hidden;
-    color: #222;
 }
 
 .sections {
     padding: 1rem 2rem;
     margin: 1rem 2rem;
     border-radius: 0.5rem;
-    background: white;
+    background: #333;
 }
 
 .headings {
@@ -193,7 +198,7 @@ button:active {
 }
 
 .sections:hover .headings{
-    text-shadow: -12px 12px #04AA6D30;
+    text-shadow: -12px 12px rgba(255, 255, 0, 0.1);
 }
 
 .sections p {
@@ -220,17 +225,18 @@ button:active {
     justify-content: flex-start;
     padding: 0.25rem;
     margin: 0.5rem;
-    box-shadow: 0px 0px 10px #CCC;
+    box-shadow: 0px 0px 10px #fff3;
     border-radius: 0.25rem;
+
 }
 
-.skill-button img {
+.skill-button svg {
     margin-right: 10px;
     height: 2rem;
 }
 
 .skill-button:hover {
-    box-shadow: 0px 0px 10px #666;
+    box-shadow: 0px 0px 10px #fff6;
 
 }
 
@@ -241,14 +247,13 @@ button:active {
 .project-heading {
     margin: 1rem 0rem;
 }
-
 .projects li {
     display: flex;
     flex-direction: column;
     flex: 1;
     width: 300px;
-    border: 1px groove #9996;
-    border-radius: 0.5rem;
+    border: 1px groove #fff5;
+    border-radius: 5px;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -258,7 +263,7 @@ button:active {
 
 .projects li:hover{
     transition: all 500ms ease-in-out;
-    border: 1px groove #04AA6D;
+    border: 1px groove #FFCC0090;
 }
 
 .tech {
@@ -270,17 +275,17 @@ button:active {
 
 .tech li {
     border-radius: 50px;
-    background-color: #6663;
+    background-color: #ccc7;
     margin: 0.25rem;
+    border: none;
     border: none;
 }
 
 .tech li:hover {
     transition: all 300ms ease-in-out;
     border: none;
-    background-color: #9999;
+    background-color: #9995;
 }
-
 .dropdown {
     position: relative;
     margin: 5px;
@@ -298,6 +303,7 @@ button:active {
     border-radius: 10px;
 }
 
+
 .links-list {
     display: none;
 }
@@ -307,8 +313,7 @@ button:active {
     position: absolute;
     width: 90vw;
     height: 50vh;
-    backdrop-filter: blur(10px);
-    background-color: #FFF5;
+    background-color: #000;
     border: 1px groove #6665;
     border-radius: 10px;
     top: 25vh;
@@ -318,7 +323,7 @@ button:active {
     justify-content: space-around;
     flex-direction: column;
     color: #020b45;
-    box-shadow: 0px 0px 0.5rem #0005;
+    box-shadow: 0px 0px 0.5rem #fff2;
 }
 
 .dropdown-links ul {
@@ -328,38 +333,41 @@ button:active {
     margin: 1rem;
 }
 
-.dropdown-links img {
+.dropdown-links svg {
     transform: scale(2);
     margin: 0.5rem;
 }
-
-.dropdown-links img:hover {
+.dropdown-links svg:hover {
     transform: scale(1.9);
 }
 .dropdown-links li {
     margin: 0.5rem;
 }
 
-
 footer {
     background-color: #6665;
     color: white;
     padding: 10px;
-    width: auto;
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer img:hover {
+footer svg:hover {
     transition: all 700ms ease-in-out;
     transform: rotate(360deg);
 }
 
+h1 {
+    margin: 0%;
+}
 @media screen and (min-width: 856px) {
     .dropdown {
         display: none;
+    }
+    .nav ul {
+        display: flex;
     }
 }
 
@@ -368,17 +376,26 @@ footer img:hover {
         flex-direction: column;
         font-size: 1em;
     }
+
     .sections p {
         font-size: 1em;
         font-weight: 300;
     }
+
     .name {
         font-size: 1.25rem;
         margin: 0rem 0.25rem;
     }
+
+    .theme-container {
+        position:inherit;
+        margin: 0rem 0.25rem;
+    }
+
     .landing h1 {
         font-size: 1.5rem;
     }
+
     .landing {
         height: 95vh;
     }
@@ -391,16 +408,14 @@ footer img:hover {
         padding: 0.75rem;
         margin: 0.75rem;
     }
-
+    
     .headings {
         font-size: 2rem;
         text-shadow: -5px 5px rgba(128,128,128, 0.2);
     }
-
     .sections:hover .headings{
-        text-shadow: -8px 8px #04AA6D30;
+        text-shadow: -8px 8px rgba(255, 255, 0, 0.1);
     }
-
     .sub-headings {
         font-size: 1.5rem;
     }
@@ -408,8 +423,6 @@ footer img:hover {
         width: 100vw;
         height: auto;
         position: fixed;
-        background: rgba(2, 11, 69, 0.97);
-        overflow: visible;
     }
 
     .info {
@@ -420,10 +433,6 @@ footer img:hover {
         padding: 0.5rem;
     }
 
-    .theme-container {
-        position:inherit;
-        margin: 0rem 0.25rem;
-    }
     nav ul{
         display: none;
         margin: 0%;
@@ -447,7 +456,6 @@ footer img:hover {
 
     aside hr {
         display: none;
-        transform: scale(0);
     }
 
     .projects li, .tech {
@@ -455,6 +463,6 @@ footer img:hover {
     }
 
     .links-list:hover {
-        filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
+    filter: invert(89%) sepia(67%) saturate(1730%) hue-rotate(359deg) brightness(109%) contrast(102%);   
     }
 }
