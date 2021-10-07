@@ -45,7 +45,6 @@ let links_open = false;
 link_btn.addEventListener("click", function() {
     if (!links_open)
     {
-        console.log("in");
         links_open = true;
         links.style.display = "flex";
     }
@@ -68,4 +67,58 @@ document.querySelector("main").addEventListener("click", function closemenu() {
         links_nav.style.display = "none";
         links_1 = true;
     }
+});
+// Onscroll nav-bar link color changes
+
+let sections = document.querySelectorAll(".sections");
+let navli = document.querySelectorAll("nav ul a li");
+let main = document.querySelector("main");
+
+document.querySelector("main").onscroll = () => {
+    let current = "";
+    sections.forEach((section) => {
+        if(main.scrollTop + 100 >= section.offsetTop) {
+            current = section.id;
+        }
+    });
+
+    navli.forEach((li) => {
+        li.classList.remove("active");
+        if (li.textContent.trim() == current) {
+            li.classList.add("active");
+            }
+
+    });
+};
+
+// Onscroll nav-bar link color changes for smaller screens. 
+
+main.ontouchmove = () => {
+    if(window.innerWidth <= 855) {
+        let current = "";
+        sections.forEach((section) => {
+            if(window.pageYOffset + 100 >= section.offsetTop) {
+                current = section.id;
+            }
+        });
+        navli.forEach((li) => {
+            li.classList.remove("mobile-active");
+            if (li.textContent.trim() == current) {
+                li.classList.add("mobile-active");
+                }
+        });
+    }
+};
+
+navli.forEach(function(li) {
+    console.log("check");
+    li.addEventListener("click", function () {
+            if(window.innerWidth <= 855) {
+            navli.forEach((l) => {
+                if(li != l)
+                    l.classList.remove("mobile-active");
+                    li.classList.add("mobile-active");
+                });
+            }
+        });
 });
