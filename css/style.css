@@ -4,12 +4,25 @@
     scroll-behavior: smooth;
     transform-origin: center;
 }
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+    color: black;
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4,  body.dark-themeh5,
+body.dark-theme h6, body.dark-theme p, body.dark-theme span, body.dark-theme a  {
+    color: white;
+}
 body {
     display: flex;
     flex-direction: row;
     margin: 0%;
     background: url(../images/bg-light.svg);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body.dark-theme {
+    background: url(../images/bg-dark.svg);
 }
 
 h1 {
@@ -21,8 +34,12 @@ aside {
     height: 100vh;
     backdrop-filter: blur(5px);
     color: black;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 5px black;
     z-index: 1;
+}
+
+body.dark-theme aside {
+    color: white;
 }
 
 .info {
@@ -66,6 +83,9 @@ li svg:hover {
     filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
 }
 
+body.dark-theme li svg:hover {
+    filter: invert(89%) sepia(67%) saturate(1730%) hue-rotate(359deg) brightness(109%) contrast(102%);   
+}
 nav ul {
     display: flex;
     flex-direction: column;
@@ -85,15 +105,28 @@ nav li:hover {
     color: black;
 }
 
+body.dark-theme nav li:hover {
+    background-color: #444;
+    color: white;
+}
+
 .active{
     border-radius: 0 2rem 2rem 0;
     margin-right: -1rem;
     background: #eef;
     color: black;
 }
+body.dark-theme .active {
+    background-color: #444;
+    color: white;
+}
 
 .mobile-active {
     color: #04AA6D;
+}
+
+body.dark-theme .mobile-active {
+    color: rgba(255, 255, 0, 1);
 }
 
 .theme-container {
@@ -114,9 +147,17 @@ nav li:hover {
     border-radius: 20px;
 }
 
+body.dark-theme .theme-toggle {
+    background-color: #ff04;
+}
+
 .theme-toggle:hover {
     transition: all 300ms ease-in;
     box-shadow: 1px 1px 10px #00f7;
+}
+
+body.dark-theme .theme-toggle:hover {
+    box-shadow: 1px 1px 10px #ff07;
 }
 
 button{
@@ -130,12 +171,23 @@ button{
     transition: all 500ms ease-in-out;
 }
 
+body.dark-theme button {
+    border: 2px solid #555;
+    box-shadow: 0 0 1px #888;
+    color: white;
+}
+
 button:hover{
     box-shadow: -3px 3px rgba(128,128,128, 0.3);
     background: #04AA6D;
     position: relative;
     left: 1px;
     bottom: 1px;
+}
+
+body.dark-theme button:hover {
+    color: black;
+    background: #ff0;
 }
 
 button:active {
@@ -159,6 +211,11 @@ button:active {
     margin: 1rem 2rem;
     border-radius: 0.5rem;
     background: white;
+    color: #000;
+}
+
+body.dark-theme .sections {
+    background: #333;
 }
 
 .headings {
@@ -171,6 +228,10 @@ button:active {
 
 .sections:hover .headings{
     text-shadow: -0.15rem 0.15rem #04886D;
+}
+
+body.dark-theme .sections:hover .headings{
+    text-shadow: -0.15rem 0.15rem rgba(255, 255, 0, 0.4);
 }
 
 .sections p {
@@ -201,6 +262,10 @@ button:active {
     border-radius: 0.25rem;
 }
 
+body.dark-theme .skill-button {
+    box-shadow: 0 0 10px #fff3;
+}
+
 .skill-button svg {
     margin-right: 10px;
     height: 2rem;
@@ -208,7 +273,11 @@ button:active {
 
 .skill-button:hover {
     box-shadow: 0px 0px 10px #666;
+    
+}
 
+body.dark-theme .skill-button:hover {
+    box-shadow: 0 0 10px #fff6;
 }
 
 .projects {
@@ -233,9 +302,17 @@ button:active {
     align-items: center;
 }
 
+body.dark-theme .projects li {
+    border: 1px groove #fff5;
+}
+
 .projects li:hover{
     transition: all 500ms ease-in-out;
     border: 1px groove #04AA6D;
+}
+
+body.dark-theme .projects li:hover{
+    border: 1px groove #FC09;
 }
 
 .tech {
@@ -250,6 +327,11 @@ button:active {
     background-color: #6663;
     margin: 0.25rem;
     border: none;
+}
+
+body.dark-theme .tech li {
+    background-color: #ccc7;
+    color: white;
 }
 
 .tech li:hover {
@@ -275,6 +357,10 @@ button:active {
     border-radius: 10px;
 }
 
+body.dark-theme .dropdown .bar {
+    background-color: white;
+}
+
 .links-list {
     display: none;
 }
@@ -295,6 +381,11 @@ button:active {
     color: #020b45;
     box-shadow: 0px 0px 0.5rem #0005;
     transform-origin: top;
+}
+
+body.dark-theme .dropdown-links {
+    background-color: #000;
+    box-shadow: 0 0 0.5rem #fff2;
 }
 
 .dropdown-links ul {
@@ -371,7 +462,10 @@ footer svg:hover {
     .sections:hover .headings{
         text-shadow: -0.1rem 0.1    rem #04AA6D40;
     }
-    
+
+    body.dark-theme .sections:hover .headings{
+        text-shadow: -0.15rem 0.15rem rgba(255, 255, 0, 0.2);
+    }
     .sub-headings {
         font-size: 1.5rem;
     }
@@ -426,6 +520,10 @@ footer svg:hover {
     
     .links-list:hover {
         filter: invert(41%) sepia(94%) saturate(1636%) hue-rotate(129deg) brightness(92%) contrast(97%);
+    }
+
+    body.dark-theme .links-list:hover {
+        filter: invert(89%) sepia(67%) saturate(1730%) hue-rotate(359deg) brightness(109%) contrast(102%);   
     }
 }
 

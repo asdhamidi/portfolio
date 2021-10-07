@@ -5,14 +5,11 @@ let theme = document.getElementById("theme-source");
 let btn_icon = document.getElementById("theme-toggle")
 
 btn.addEventListener("click", function () {
-if (theme.getAttribute("href") == "./css/style.css") {
-        theme.href = "./css/dark.css";
-        btn_icon.src = "./images/day.svg";
-    }
-    else {
-        theme.href = "./css/style.css";
-        btn_icon.src = "./images/night.svg";
-    }
+    document.body.classList.toggle('dark-theme');  
+    if(document.body.classList == "dark-theme") {
+    btn_icon.src = "./images/day.svg";}
+    else{
+    btn_icon.src = "./images/night.svg";}
 });
 
 // Dropdown menu for small screens part
