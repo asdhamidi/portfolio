@@ -13,16 +13,16 @@ body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, 
 body.dark-theme h6, body.dark-theme p, body.dark-theme span, body.dark-theme a  {
     color: white;
 }
+
 body {
     display: flex;
     flex-direction: row;
     margin: 0%;
-    background: url(../images/bg-light.svg);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body.dark-theme {
-    background: url(../images/bg-dark.svg);
+    background: #222;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h1 {
 }
 aside {
     flex-shrink: 0;
-    width: 16rem;
+    width: 14rem;
     height: 100vh;
     backdrop-filter: blur(5px);
     color: black;
@@ -40,6 +40,7 @@ aside {
 
 body.dark-theme aside {
     color: white;
+    background-color: #12121250;
 }
 
 .info {
@@ -52,9 +53,11 @@ main {
     width: 80vw;
     height: 100vh;
     overflow-y: scroll;
-    
+    background-color: #A0AFFF;
 }
-
+body.dark-theme main {
+    background-color: #222;
+}
 .name {
     font-size: 1.5rem;
     margin: 15px 5px;
@@ -100,8 +103,7 @@ nav li {
     transition: all 100ms ease-out;
 }
 nav li:hover {
-    border-radius: 0 2rem 2rem 0;
-    background: #eef;
+    background: #ccf;
     color: black;
 }
 
@@ -113,7 +115,7 @@ body.dark-theme nav li:hover {
 .active{
     border-radius: 0 2rem 2rem 0;
     margin-right: -1rem;
-    background: #eef;
+    background: #ccf;
     color: black;
 }
 body.dark-theme .active {
@@ -178,16 +180,17 @@ body.dark-theme button {
 }
 
 button:hover{
-    box-shadow: -3px 3px rgba(128,128,128, 0.3);
-    background: #04AA6D;
+    box-shadow: -3px 3px #6665;
+    background: #A0AFFF80;
     position: relative;
     left: 1px;
     bottom: 1px;
 }
 
 body.dark-theme button:hover {
+    box-shadow: -3px 3px #6665;
     color: black;
-    background: #ff0;
+    background: #B7D0FF;
 }
 
 button:active {
@@ -203,9 +206,12 @@ button:active {
     align-items: center;
     flex-direction: column;
     overflow-y: hidden;
-    color: #222;
+    background: url("../images/bg-light.svg") no-repeat;
 }
-
+ /* super duper amazing background by SVGBackgrounds.com */
+body.dark-theme .landing {
+    background: url("../images/bg-dark.svg") no-repeat;
+}
 .sections {
     padding: 1rem 2rem;
     margin: 1rem 2rem;
@@ -215,19 +221,19 @@ button:active {
 }
 
 body.dark-theme .sections {
-    background: #333;
+    background: #121212;
 }
 
 .headings {
     font-size: 3rem;
-    text-shadow: -0.10rem 0.10rem #6663, -0.15rem 0.15rem #6665, -0.2rem 0.2rem #6669;
+    text-shadow: -0.10rem 0.10rem #6663, -0.15rem 0.15rem #6665, -0.2rem 0.2rem #6667;
     font-weight: 600;
     margin-bottom: 2rem;
     transition: all 300ms ease-in-out;
 }
 
 .sections:hover .headings{
-    text-shadow: -0.15rem 0.15rem #04886D;
+    text-shadow: -0.15rem 0.15rem #A0AFFF;
 }
 
 body.dark-theme .sections:hover .headings{
@@ -332,6 +338,7 @@ body.dark-theme .projects li:hover{
 body.dark-theme .tech li {
     background-color: #ccc7;
     color: white;
+    border: none;
 }
 
 .tech li:hover {
@@ -340,6 +347,10 @@ body.dark-theme .tech li {
     background-color: #9999;
 }
 
+body.dark-theme .tech li:hover {
+    border: none;
+    background-color: #555;
+}
 .dropdown {
     position: relative;
     margin: 5px;
@@ -429,6 +440,7 @@ footer svg:hover {
     body {
         flex-direction: column;
         font-size: 1em;
+        overflow-y: hidden;
     }
     .sections p {
         font-size: 1em;
@@ -442,12 +454,11 @@ footer svg:hover {
         font-size: 1.5rem;
     }
     .landing {
-        height: 95vh;
+        height: 100vh;
     }
     main {
         width: 100vw;
         margin-top: 1rem;
-        overflow-y: visible;
     }
     .sections {
         padding: 0.75rem;
@@ -456,11 +467,11 @@ footer svg:hover {
     
     .headings {
         font-size: 2rem;
-        text-shadow: -0.10rem 0.10rem #6663, -0.15rem 0.15rem #6665, -0.2rem 0.2rem #6669;
+        text-shadow: -0.10rem 0.10rem #6661, -0.15rem 0.15rem #6667;
     }
     
     .sections:hover .headings{
-        text-shadow: -0.1rem 0.1    rem #04AA6D40;
+        text-shadow: -0.1rem 0.1rem #04AA6D40;
     }
 
     body.dark-theme .sections:hover .headings{
@@ -473,7 +484,6 @@ footer svg:hover {
         width: 100vw;
         height: auto;
         position: fixed;
-        overflow: visible;
     }
     
     .info {
