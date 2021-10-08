@@ -36,6 +36,18 @@ aside {
     color: black;
     box-shadow: 0 0 5px black;
     z-index: 1;
+    animation: loadaside 250ms ease-in-out 0s 1;
+}
+
+@keyframes loadaside {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+      transform: translateX(0);
+    }
 }
 
 body.dark-theme aside {
@@ -50,7 +62,7 @@ body.dark-theme aside {
     padding: 1rem;
 }
 main {
-    width: 80vw;
+    width: 90vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #A0AFFF;
@@ -121,14 +133,6 @@ body.dark-theme nav li:hover {
 body.dark-theme .active {
     background-color: #444;
     color: white;
-}
-
-.mobile-active {
-    color: #04AA6D;
-}
-
-body.dark-theme .mobile-active {
-    color: rgba(255, 255, 0, 1);
 }
 
 .theme-container {
@@ -207,6 +211,18 @@ button:active {
     flex-direction: column;
     overflow-y: hidden;
     background: url("../images/bg-light.svg") no-repeat;
+    animation: loadscreen 1s ease-out 0s 1;
+}
+
+@keyframes loadscreen {
+    0% {
+        transform: translateY(-5%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
  /* super duper amazing background by SVGBackgrounds.com */
 body.dark-theme .landing {
@@ -302,7 +318,7 @@ body.dark-theme .skill-button:hover {
     border: 1px groove #9996;
     border-radius: 0.5rem;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     justify-content: space-between;
     align-items: center;
@@ -324,7 +340,7 @@ body.dark-theme .projects li:hover{
 .tech {
     display: flex;
     flex-wrap: wrap;
-    padding: 0%;
+    padding: 0rem;
     margin: 0.25rem;
 }
 
@@ -332,6 +348,7 @@ body.dark-theme .projects li:hover{
     border-radius: 50px;
     background-color: #6663;
     margin: 0.25rem;
+    padding: 10px;
     border: none;
 }
 
@@ -440,7 +457,6 @@ footer svg:hover {
     body {
         flex-direction: column;
         font-size: 1em;
-        overflow-y: hidden;
     }
     .sections p {
         font-size: 1em;
@@ -458,7 +474,6 @@ footer svg:hover {
     }
     main {
         width: 100vw;
-        margin-top: 1rem;
     }
     .sections {
         padding: 0.75rem;
@@ -484,6 +499,16 @@ footer svg:hover {
         width: 100vw;
         height: auto;
         position: fixed;
+        animation: loadnav 500ms ease-out 0s 1;
+    }
+
+    @keyframes loadnav {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
     
     .info {
@@ -501,7 +526,7 @@ footer svg:hover {
     nav ul{
         display: none;
         margin: 0%;
-    }
+    }   
     
     .links-list {
         display: inline;
