@@ -36,7 +36,7 @@ aside {
     color: black;
     box-shadow: 0 0 5px black;
     z-index: 1;
-    animation: loadaside 250ms ease-in-out 0s 1;
+    animation: loadaside 0.5s ease-out 0s 1;
 }
 
 @keyframes loadaside {
@@ -294,8 +294,8 @@ body.dark-theme .skill-button {
 }
 
 .skill-button:hover {
+    transition: all 500ms ease-in-out;
     box-shadow: 0px 0px 10px #666;
-    
 }
 
 body.dark-theme .skill-button:hover {
@@ -471,6 +471,11 @@ footer svg:hover {
     }
     .landing {
         height: 100vh;
+        background-size: cover;
+    }
+
+    body.dark-theme .landing {
+        background-size: cover;
     }
     main {
         width: 100vw;
