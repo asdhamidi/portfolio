@@ -37,6 +37,7 @@ aside {
     box-shadow: 0 0 5px black;
     z-index: 1;
     animation: loadaside 0.5s ease-out 0s 1;
+    background-color: #eee;
 }
 
 @keyframes loadaside {
@@ -52,7 +53,7 @@ aside {
 
 body.dark-theme aside {
     color: white;
-    background-color: #12121250;
+    background-color: #1a1a1a;
 }
 
 .info {
@@ -60,6 +61,8 @@ body.dark-theme aside {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    padding-bottom: 0%;
+    border-bottom: 1px solid #666;
 }
 main {
     width: 90vw;
@@ -111,7 +114,7 @@ nav ul {
 
 nav li {
     padding: 15px;
-    font-size: 1.25rem;
+    font-size: 1.1em;
     transition: all 100ms ease-out;
 }
 nav li:hover {
@@ -138,8 +141,8 @@ body.dark-theme .active {
 .theme-container {
     display: inline-flex;
     position: absolute;
-    bottom: 5%;
-    right: 1%;
+    bottom: 3%;
+    right: 2%;
     justify-content: flex-start;
 }
 .theme-toggle {
@@ -153,6 +156,20 @@ body.dark-theme .active {
     border-radius: 20px;
 }
 
+.links svg, .theme-toggle{
+    animation: rotate 1.5s;
+    animation-timing-function: cubic-bezier(.17,.67,.29,1.2);;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 body.dark-theme .theme-toggle {
     background-color: #ff04;
 }
@@ -169,30 +186,25 @@ body.dark-theme .theme-toggle:hover {
 button{
     font-size: 1.25rem;
     background: transparent;
-    border: 2px solid #6661;
-    box-shadow: 0 0 1px #666;
+    border: 2px solid #6663;
     border-radius: 5px;
     width: auto;
     text-align: center;
     transition: all 500ms ease-in-out;
+    box-sizing: border-box;
 }
 
 body.dark-theme button {
-    border: 2px solid #555;
+    border: 2px solid #5555;
     box-shadow: 0 0 1px #888;
     color: white;
 }
 
 button:hover{
-    box-shadow: -3px 3px #6665;
-    background: #A0AFFF80;
-    position: relative;
-    left: 1px;
-    bottom: 1px;
+    background: #A0AFFF;
 }
 
 body.dark-theme button:hover {
-    box-shadow: -3px 3px #6665;
     color: black;
     background: #B7D0FF;
 }
@@ -210,6 +222,7 @@ button:active {
     align-items: center;
     flex-direction: column;
     overflow-y: hidden;
+    /* super duper amazing background by SVGBackgrounds.com */
     background: url("../images/bg-light.svg") no-repeat;
     animation: loadscreen 1s ease-out 0s 1;
 }
@@ -224,8 +237,8 @@ button:active {
         opacity: 1;
     }
 }
- /* super duper amazing background by SVGBackgrounds.com */
 body.dark-theme .landing {
+    /* super duper amazing background by SVGBackgrounds.com */
     background: url("../images/bg-dark.svg") no-repeat;
 }
 .sections {
